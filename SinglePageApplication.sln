@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SinglePageApplication", "WebApplication1\SinglePageApplication.csproj", "{752C352D-1D18-45F2-A516-536377F083E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SinglePageApplication", "WebApplication1\SinglePageApplication.csproj", "{752C352D-1D18-45F2-A516-536377F083E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{1FDA4F79-9867-41C2-9B0F-4A0C92328BC3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{1FDA4F79-9867-41C2-9B0F-4A0C92328BC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryLayer", "RepositoryLayer\RepositoryLayer.csproj", "{70897D38-5B8A-405C-B2F2-481479EE2DD1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryLayer", "RepositoryLayer\RepositoryLayer.csproj", "{70897D38-5B8A-405C-B2F2-481479EE2DD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLayer", "CommonLayer\CommonLayer.csproj", "{825F0650-5757-4606-AFB5-C5C547139687}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonLayer", "CommonLayer\CommonLayer.csproj", "{825F0650-5757-4606-AFB5-C5C547139687}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "EmployeeManagmentDB", "EmployeeManagmentDB\EmployeeManagmentDB.sqlproj", "{0F72C79F-3446-4535-8059-C17BBE4E184E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication2", "WebApplication2\WebApplication2.csproj", "{3FE91C68-27C9-4169-86F6-8BB855FAA9D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{0F72C79F-3446-4535-8059-C17BBE4E184E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F72C79F-3446-4535-8059-C17BBE4E184E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0F72C79F-3446-4535-8059-C17BBE4E184E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{3FE91C68-27C9-4169-86F6-8BB855FAA9D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FE91C68-27C9-4169-86F6-8BB855FAA9D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FE91C68-27C9-4169-86F6-8BB855FAA9D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FE91C68-27C9-4169-86F6-8BB855FAA9D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

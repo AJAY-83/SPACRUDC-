@@ -161,7 +161,9 @@ namespace RepositoryLayer.Services
                         }
                         return employeeModels;
                     }
-                   
+                    else {
+                        throw new Exception();
+                    }
                     
                 }
             }
