@@ -105,8 +105,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="~/js/HomeController.js" type="text/javascript"></script>
 
     <style>
         .modal-notify .modal-header {
@@ -121,8 +122,8 @@
 <body class="bg-danger">
 
     <div class="jumbotron text-center">
-        <h1>Registration Form</h1>
-      
+        <h1 style="color:red;text-transform:capitalize;">Registration Form</h1>
+
     </div>
 
     <div class="container">
@@ -151,32 +152,32 @@
                                 <div class="md-form mb-5">
                                     <i class="fas fa-user prefix grey-text"></i>
                                     <label data-error="wrong" data-success="right" for="form3">Full Name</label>
-                                    <input type="text" id="form3" class="form-control validate">
+                                    <input type="text" id="Name" class="form-control validate">
                                 </div>
 
                                 <div class="md-form">
                                     <i class="fas fa-envelope prefix grey-text"></i>
                                     <label data-error="wrong" data-success="right" for="form2">Your Email</label>
-                                    <input type="email" id="form2" class="form-control validate">
+                                    <input type="email" id="Email" class="form-control validate">
                                 </div>
 
                                 <div class="md-form">
                                     <i class="fas fa-envelope prefix grey-text"></i>
                                     <label data-error="wrong" data-success="right" for="form2">Your Salary</label>
-                                    <input type="email" id="form2" class="form-control validate">
+                                    <input type="number" id="Salary" class="form-control validate">
                                 </div>
                                 <br />
                                 <div class="md-form form-control">
                                     <i class="fas fa-envelope prefix grey-text"></i>
                                     <label data-error="wrong" data-success="right" for="form2">Your Gender</label>
-                                   <input type="radio"><label>Male</label>
-                                    <input type="Radio"><label>Female</label>
+                                    <input type="radio" value="Male" name="gender" id="Gender"><label>Male</label>
+                                    <input type="Radio" value="Female" name="gender" id="Gender"><label>Female</label>
                                 </div>
                             </div>
 
                             <!--Footer-->
                             <div class="modal-footer justify-content-center bg-info">
-                                <a type="button" class="btn btn-danger waves-effect">Save Data <i class="fas fa-paper-plane-o ml-1"></i></a>
+                                <a type="button" class="btn btn-danger close" data-dismiss="modal" aria-label="Close"  onclick="Add()">Save Data</a>
                             </div>
                         </div>
                         <!--/.Content-->
@@ -184,13 +185,28 @@
                 </div>
 
                 <div class="text-center">
-                    <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#orangeModalSubscription">
-                         Add Employee Data
+                    <a href="" class="btn btn-danger" data-toggle="modal" data-target="#orangeModalSubscription">
+                        Add Employee Data
                     </a>
                 </div>
             </div>
         </div>
     </div>
+
+    <table id="employee" class="table table-bordered" style="margin-top:10px;">
+        <thead class="bg-danger text-center text-white">
+            <tr>
+                <th>ID</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Salary</th>
+                <th>Gender</th>
+                
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
 
 </body>
 </html>

@@ -1,12 +1,9 @@
 ﻿using RepositoryLayer.Interface;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
 using CommonLayer.Model;
-
 namespace RepositoryLayer.Services
 {
     public class EmployeeRL : IEmployeeRL

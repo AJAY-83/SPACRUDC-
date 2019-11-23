@@ -32,6 +32,17 @@ namespace WebApplication1
             //// Add Aplication services
             services.AddTransient<IEmployee,EmployeeBL>();
             services.AddTransient<IEmployeeRL, EmployeeRL>();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowSpecificOrigin",
+                    builder => builder.WithOrigins("*")
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowCredentials()
+                    .AllowAnyOrigin());
+            });
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -47,6 +58,9 @@ namespace WebApplication1
                 app.UseHsts();
             }
 
+
+
+            app.UseCors("AllowSpecificOrigin");
             app.UseHttpsRedirection();
             app.UseMvc();
         }

@@ -21,10 +21,10 @@ namespace SinglePageApplication.Controllers
 
         [HttpPost]
         [Route("register")]
-        public string Register(EmployeeModel model)
+        public IActionResult Register(EmployeeModel model)
         {
-            var result = this.employee.Register(model);
-            return result;
+             var result = employee.Register(model);
+             return Ok(new { result });
         }
         [HttpPost]
         [Route("update")]
@@ -44,7 +44,7 @@ namespace SinglePageApplication.Controllers
 
 
         [HttpGet]
-        //[Route("select")]
+        [Route("select")]
         public IList<EmployeeModel> DiplayEmployee()
         {
             return this.employee.DisplayEmployee();
