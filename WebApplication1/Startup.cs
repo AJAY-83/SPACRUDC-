@@ -1,22 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using BusinessLayer.Interface;
-using BusinessLayer.Services;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using RepositoryLayer.Interface;
-using RepositoryLayer.Services;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="Startup.cs" company="Bridgelabz">
+//   Copyright © 2019 Company="BridgeLabz"
+// </copyright>
+// <creator name="Ajay Lodale"/>
+// --------------------------------------------------
+
 
 namespace WebApplication1
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using BusinessLayer.Interface;
+    using BusinessLayer.Services;
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.AspNetCore.Hosting;
+    using Microsoft.AspNetCore.HttpsPolicy;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.Extensions.Logging;
+    using Microsoft.Extensions.Options;
+    using RepositoryLayer.Interface;
+    using RepositoryLayer.Services;
+
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -26,7 +34,7 @@ namespace WebApplication1
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        //// This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             //// Add Aplication services
@@ -46,7 +54,7 @@ namespace WebApplication1
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        //// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())

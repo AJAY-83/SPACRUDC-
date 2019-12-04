@@ -1,12 +1,13 @@
 ﻿
 $(document).ready(function () {
-   alert("document ")
+  
     getAllEmployees();
+    Add();
 
         });
 
 function Add() {
-    alert("in add")
+    
     var employee = {
         FullName : $('#Name').val(),
         Email : $('#Email').val(),
@@ -23,7 +24,7 @@ function Add() {
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function () {
-          //  getAllEmployees();
+            // getAllEmployees();
             alert(" Data Inserted Successfully");
         },
         error: function (err) {
@@ -35,18 +36,23 @@ function Add() {
 
 
 function getAllEmployees() {
+
     $.ajax({
         url: 'https://localhost:44352/api/employee/select',
         dataType: "json",
-        method: 'get',
+        type: 'GET',
+        contentType: "application/json;charset=utf-8",
         success: function (data) {
-            var EmployeeData = $('#employee tbody');
-            //Employee.empty();
+            alert(data.result[0].ID);
 
-            $(data).each(function (emp) {
-                Employee.append('<tr><td>' + emp.ID + '</td><td>'
-                    + emp.FullName + '</td><td>' + emp.Email + '</td><td>'
-                    + emp.Salary + '</td><td>' + emp.Gender + '</td><td>');
+            for (let key in data) {
+                alert(key, data[key].ID);
+            }
+            var EmployeeData = $('#employee tbody');
+               //employee.empty();
+            //$.each(data, function (index, val) {
+            $(data).each(function (emp,index) {
+                employee.append('<tr><td>' + emp.ID + '</td><td>'+ emp.FullName + '</td><td>' + emp.Email + '</td><td>'+ emp.Salary + '</td><td>' + emp.Gender + '</td></tr>');
             });
         },
         error: function (err) {
@@ -54,5 +60,3 @@ function getAllEmployees() {
         }
     });
 }  
-
-

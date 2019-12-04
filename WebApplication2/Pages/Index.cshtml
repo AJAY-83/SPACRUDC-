@@ -117,7 +117,7 @@
         .modal-notify .modal-content {
             border-radius: 3px;
         }
-        </style>
+    </style>
 </head>
 <body class="bg-danger">
 
@@ -141,7 +141,7 @@
                         <div class="modal-content">
                             <!--Header-->
                             <div class="modal-header text-center bg-info">
-                                <h1 class="text-capitalize text-danger">Registration</h1>
+                                <h1 class="text-capitalize text-danger"><b>Registration</b></h1>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true" class="white-text">&times;</span>
                                 </button>
@@ -152,19 +152,19 @@
                                 <div class="md-form mb-5">
                                     <i class="fas fa-user prefix grey-text"></i>
                                     <label data-error="wrong" data-success="right" for="form3">Full Name</label>
-                                    <input type="text" id="Name" class="form-control validate">
+                                    <input type="text" id="Name" class="form-control validate" required>
                                 </div>
 
                                 <div class="md-form">
                                     <i class="fas fa-envelope prefix grey-text"></i>
                                     <label data-error="wrong" data-success="right" for="form2">Your Email</label>
-                                    <input type="email" id="Email" class="form-control validate">
+                                    <input type="email" id="Email" class="form-control validate" required>
                                 </div>
 
                                 <div class="md-form">
                                     <i class="fas fa-envelope prefix grey-text"></i>
                                     <label data-error="wrong" data-success="right" for="form2">Your Salary</label>
-                                    <input type="number" id="Salary" class="form-control validate">
+                                    <input type="number" id="Salary" class="form-control validate" required>
                                 </div>
                                 <br />
                                 <div class="md-form form-control">
@@ -177,7 +177,7 @@
 
                             <!--Footer-->
                             <div class="modal-footer justify-content-center bg-info">
-                                <a type="button" class="btn btn-danger close" data-dismiss="modal" aria-label="Close"  onclick="Add()">Save Data</a>
+                                <a type="button" class="btn btn-danger close" data-dismiss="modal" aria-label="Close" onclick="Add()">Save Data</a>
                             </div>
                         </div>
                         <!--/.Content-->
@@ -201,10 +201,10 @@
                 <th>Email</th>
                 <th>Salary</th>
                 <th>Gender</th>
-                
+
             </tr>
         </thead>
-        <tbody></tbody>
+        <tbody> </tbody>
     </table>
 
 
